@@ -2,7 +2,7 @@
 
 pkgname=acl
 pkgver=2.2.51
-pkgrel=2
+pkgrel=3
 pkgdesc="Access control list utilities, libraries and headers"
 arch=('i686' 'x86_64')
 url="http://savannah.nongnu.org/projects/acl"
@@ -26,8 +26,4 @@ build() {
 
 package() {
   make -C "$pkgname-$pkgver" DIST_ROOT="$pkgdir" install install-lib install-dev
-
-  # tidy up
-  rm -f "$pkgdir"/usr/lib/libacl.a
-  chmod 0755 "$pkgdir"/usr/lib/libacl.so.*.*.*
 }
