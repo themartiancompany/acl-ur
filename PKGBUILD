@@ -7,6 +7,7 @@ pkgdesc='Access control list utilities, libraries and headers'
 arch=('x86_64')
 url='https://savannah.nongnu.org/projects/acl'
 license=('LGPL')
+depends=('glibc')
 makedepends=('attr')
 replaces=('xfsacl')
 provides=('xfsacl' 'libacl.so')
